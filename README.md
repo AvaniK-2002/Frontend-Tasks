@@ -6,8 +6,7 @@ A modern, responsive, and fully functional To-Do List app built using HTML, CSS,
 
 ## 🚀 Live Demo
 
-> 🌐 [View Deployed App](https://your-deployment-link.com)  
-> *(Replace this with your Netlify/Vercel/GitHub Pages link)*
+> 🌐 [View Deployed App](https://frontend-tasks-rho.vercel.app/)  
 
 ---
 
@@ -28,7 +27,7 @@ A modern, responsive, and fully functional To-Do List app built using HTML, CSS,
 
 - **HTML5**
 - **CSS3**
-- **Vanilla JavaScript**
+- **JavaScript**
 - **localStorage API**
 - **Drag and Drop API**
 
@@ -40,5 +39,12 @@ A modern, responsive, and fully functional To-Do List app built using HTML, CSS,
 
 ```bash
 git clone https://github.com/AvaniK-2002/Frontend-Tasks.git
-cd Frontend-Tasks
+cd to-do-app
 
+start index.html
+
+🙌 Contributing
+Feel free to fork the repo and submit pull requests for improvements or features!
+
+🧑‍💻 Developed By
+Avani Kulkarni
