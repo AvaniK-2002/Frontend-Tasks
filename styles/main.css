@@ -1,0 +1,128 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-2);
+  }
+  
+  a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  a:hover {
+    color: var(--color-primary-700);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: var(--font-family);
+    border: none;
+    background: none;
+    font-size: var(--font-size-md);
+    transition: all var(--transition-fast);
+  }
+  
+  input, button {
+    outline: none;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  svg {
+    flex-shrink: 0;
+  }
+  
+  /* App Container */
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Priority Colors */
+  .priority-low {
+    color: var(--color-priority-low);
+    border-color: var(--color-priority-low);
+  }
+  
+  .priority-medium {
+    color: var(--color-priority-medium);
+    border-color: var(--color-priority-medium);
+  }
+  
+  .priority-high {
+    color: var(--color-priority-high);
+    border-color: var(--color-priority-high);
+  }
+  
+  .task-item.priority-low {
+    border-left: 3px solid var(--color-priority-low);
+  }
+  
+  .task-item.priority-medium {
+    border-left: 3px solid var(--color-priority-medium);
+  }
+  
+  .task-item.priority-high {
+    border-left: 3px solid var(--color-priority-high);
+  }
+  
+  /* Due Date Styling */
+  .task-due-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: var(--space-2);
+  }
+  
+  .task-due-date.overdue {
+    color: var(--color-error-500);
+  }
+  
+  .task-due-date.today {
+    color: var(--color-warning-500);
+  }
+  
+  .task-due-date.future {
+    color: var(--color-success-500);
+  }
+  
+  .task-due-date svg {
+    margin-right: var(--space-1);
+  }

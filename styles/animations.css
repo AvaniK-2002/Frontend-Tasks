@@ -1,0 +1,150 @@
+/* Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 60% {
+      transform: translateX(-5px);
+    }
+    40%, 80% {
+      transform: translateX(5px);
+    }
+  }
+  
+  @keyframes checkmark {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Applied Animations */
+  .task-item {
+    animation: fadeIn var(--transition-normal);
+  }
+  
+  .filter-btn.active {
+    animation: pulse 2s infinite;
+    animation-duration: 2s;
+  }
+  
+  .task-checkbox input:checked ~ .checkmark:after {
+    animation: checkmark var(--transition-normal);
+  }
+  
+  .task-item.shake {
+    animation: shake 0.5s;
+  }
+  
+  .task-item.checked {
+    animation: slideInRight var(--transition-normal);
+  }
+  
+  /* Transition Effects */
+  .task-item {
+    transition: opacity var(--transition-normal),
+                transform var(--transition-normal),
+                background-color var(--transition-normal),
+                box-shadow var(--transition-normal);
+  }
+  
+  .filter-btn {
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast),
+                transform var(--transition-fast);
+  }
+  
+  .task-checkbox .checkmark {
+    transition: background-color var(--transition-fast),
+                border-color var(--transition-fast),
+                transform var(--transition-fast);
+  }
+  
+  .app-container, 
+  .app-header, 
+  .app-main, 
+  .app-footer {
+    transition: background-color var(--transition-slow),
+                color var(--transition-slow);
+  }
+  
+  /* Hover Effects */
+  .task-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .add-btn:hover,
+  .save-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .add-btn:active,
+  .save-btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* Drag and Drop Animations */
+  .task-item.drag-over {
+    transform: scale(1.02);
+    border-top: 2px dashed var(--color-primary-400);
+  }
+  
+  .task-item.dragging {
+    box-shadow: var(--shadow-lg);
+    opacity: 0.6;
+    z-index: 10;
+  }
